@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+header i{
+    margin-left: 90px;
+    margin-top: 49px;
+    font-size: 30px;
+}
+#title{
+    font-size: 35px;
+}
+#today{
+    font-size: 25px;
+}
+#question{
+    font-size: 97px;
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: 102px;
+    margin-top: 120px;
+}
+#input_guide1{
+    font-size: 19px;
+    text-align: center;
+    margin-top: 200px;
+    color: #464646;
+}
+#input_guide2{
+    font-size: 14px;
+    color: #888888;
+    text-align: center;
+}
+hr{
+    background-color: #bbbdbb;
+    margin-top: 28px;
+    width: 35%;
+}
