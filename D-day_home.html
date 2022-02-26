@@ -10,15 +10,34 @@
 </head>
 <body>
     <header>
-        <i class="fa fa-solid fa-bars"></i>
-        <p id="title">D-DAY</p>
-        <p id="today">TODAY</p>
+        <div id="header">
+            <i class="fa fa-solid fa-bars"></i>
+            <p id="title">D-DAY</p>
+            <p id="today">TODAY</p>
+        </div>
+        <p id="today_date"></p>
     </header>
     <main>
         <div id="question">When is <br> your waiting <br> date?</div>
         <p id="input_guide1">날짜를 입력하세요.</p>
         <p id="input_guide2">수고하셨습니다. 당신이 기다리는 날을 입력해보세요.</p>
         <hr style="border: 5px solid #bbbdbb">
+        <ul id="input_waitingDate">
+            <li id="input_year">
+                <label for="year">YEAR</label>
+                <input type="number" id="year">
+            </li>
+            <li id="input_month">
+                <label for="month">MONTH</label>
+                <input type="number" id="month">
+            </li>
+            <li id="input_date">
+                <label for="date">DATE</label>
+                <input type="number" id="date">
+            </li>
+        </ul>
+        <button id="letsSee">남은 날짜 보기</button>
     </main>
+    <script src="D-day_home.js"></script>
 </body>
 </html>

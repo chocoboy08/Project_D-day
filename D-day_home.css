@@ -1,4 +1,4 @@
-header{
+#header{
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -13,6 +13,12 @@ header i{
 }
 #today{
     font-size: 25px;
+    margin-right: 287px;
+}
+#today_date{
+    position: fixed;
+    top: 55px;
+    right: 160px;
 }
 #question{
     font-size: 97px;
@@ -35,5 +41,39 @@ header i{
 hr{
     background-color: #bbbdbb;
     margin-top: 28px;
-    width: 35%;
+    width: 647px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+li label{
+    font-size: 16px;
+    color: #838383;
+}
+li input{
+    width: 137px;
+    height: 25px;
+    border-radius: 13px;
+    background-color: #f5f5f5;
+    border: none;
+}
+input{
+    padding: 0;
+    margin: 0 14px 0 25px;
+}
+#letsSee{
+    display: block;
+    margin: 0 auto;
+    width: 188px;
+    height: 45px;
+    border-radius: 23px;
+    border: 2.4px solid #959896;
+    color: #7e817e;
+}
+#letsSee:hover{
+    background-color: #05005c;
+    color: white;
+    border: none;
 }
