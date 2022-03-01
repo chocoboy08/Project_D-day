@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Spartan:wght@400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Spartan:wght@400;600;700;800;900&display=swap');
+body{
+    background-image: url(images/bottomLeft.png), url(images/topRight.png);
+    background-repeat: no-repeat;
+    background-position: bottom left, top right;
+}
+
 #header{
     display: flex;
     justify-content: space-between;
@@ -10,21 +15,39 @@ header i{
     margin-top: 49px;
     font-size: 30px;
 }
+#logo{
+    margin-top: 20px;
+}
 #title{
-    font-size: 35px;
+    font-size: 33px;
     font-family: 'Spartan', sans-serif;
     font-weight: 600;
+    letter-spacing: -3px;
+    position: relative;
+    z-index: 2;
+}
+#logo_circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #c5d590;
+    position: absolute;
+    top: 35px;
+    margin-left: 7px;
+    z-index: 1;
 }
 #today{
     font-size: 22px;
     font-family: 'Spartan', sans-serif;
     font-weight: 600;
-    color: black;
+    letter-spacing: -2px;
+    color: white;
     position: absolute;
-    top: 39px;
+    top: 43px;
     right: 180px;
 }
 #today_date{
+    font-size: 20px;
     line-height: 100px;
     margin-right: 70px;
     font-family: 'Spartan', sans-serif;
@@ -36,8 +59,8 @@ header i{
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
     text-align: center;
-    letter-spacing: -1px;
-    line-height: 125px;
+    letter-spacing: -8px;
+    line-height: 120px;
     margin-top: 120px;
 }
 #input_guide1{
@@ -71,6 +94,9 @@ ul{
 }
 li label{
     font-size: 16px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
     color: #838383;
 }
 li input{
@@ -89,12 +115,16 @@ input{
     margin: 0 14px 0 25px;
 }
 #letsSee{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
     display: block;
     margin: 71px auto 0 auto;
     width: 188px;
     height: 45px;
     border-radius: 23px;
-    border: 2.4px solid #959896;
+    border: 3px solid #959896;
+    background-color: rgba(0, 0, 0, 0);
     color: #7e817e;
 }
 #letsSee:hover{
