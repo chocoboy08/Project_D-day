@@ -1,38 +1,68 @@
 let date_info = new Date();
-let td_year = date_info.getFullYear();
-let td_month = date_info.getMonth() + 1;
-let td_date = date_info.getDate();
+let tdYear = date_info.getFullYear();
+let tdMonth = date_info.getMonth() + 1;
+let tdDate = date_info.getDate();
 
-let today = td_year + "." + td_month + "." + td_date;
+let today = tdYear + "." + tdMonth + "." + tdDate;
 
 document.querySelector("#today_date").innerHTML = today;
 
-function getDate(){
-    let ip_year = document.getElementById("year").value;
-    let ip_month = document.getElementById("month").value;
-    let ip_date = document.getElementById("date").value;
+function getInput(){
+    let ipYear = document.getElementById("year").value;
+    let ipMonth = document.getElementById("month").value;
+    let ipDate = document.getElementById("date").value;
     
-    compareDate(ip_year, ip_month, ip_date);
+    compareDate(ipYear, ipMonth, ipDate);
 }
 
 function compareDate(y, m, d){
     let endDate = new Date(y, m, d);
-    let stDate = new Date(td_year, td_month, td_date);
+    let stDate = new Date(tdYear, tdMonth, tdDate);
     let remain = (endDate.getTime() - stDate.getTime()) / (1000*60*60*24);
-    
-    if(remain < 0){
-        alert("날짜를 잘못 입력하셨습니다.");
+
+    const ODD_MONTH = [1,3,5,7,8,10,12];
+    const EVEN_MONTH = [2,4,6,9,11];
+    let monthEnd = 0;
+    if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12 ){
+        monthEnd = 31;
     }
-    else{
-        if(remain <= 50){
-            alert(remain + ", One step closer!");
-        }
-        else if(remain <= 100){
-            alert(remain + ", Cheer up!");
+    else if(m == 4 || m == 6 || m == 9 || m == 11){
+        monthEnd = 30;
+    }
+    else if(m == 2){
+        if(y % 4 == 0){
+           monthEnd = 29;
+           remain += 2;
         }
         else{
-            alert(remain + ", Too bad..");
+            monthEnd = 28;
+            remain += 3;
         }
     }
+    else{
+        alert("날짜를 잘못 입력하셨습니다.");
+    }
+
+    if(d <= monthEnd && d > 0){
+        if(remain < 0){
+            alert("날짜를 잘못 입력하셨습니다.");
+        }
+        else{
+            if(remain <= 50){
+                alert(remain + ", One step closer!");
+            }
+            else if(remain <= 100){
+                alert(remain + ", Cheer up!");
+            }
+            else{
+                alert(remain + ", Too bad..");
+            }
+        }
+    }
+    else{
+        alert("날짜를 잘못 입력하셨습니다.");
+    }
 }
-document.getElementById("letsSee").addEventListener('click', getDate)
+
+
+document.getElementById("letsSee").addEventListener('click', getInput);
