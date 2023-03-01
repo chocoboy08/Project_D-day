@@ -18,7 +18,7 @@ body{
     height: 10vh;
 }
 #header_set{
-    width: 13.6vw;
+    width: 13vw;
 }
 #logo{
     margin-top: 1.8vh;
@@ -131,7 +131,7 @@ input{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
     font-size: 0.93vw;
-    margin: 4vh auto 7vh auto;
+    margin: 4vh auto 6vh auto;
     width: 9.7vw;
     height: 2.3vw;
     border-radius: 5vw;
@@ -142,5 +142,5 @@ input{
 #letsSee:hover{
     background-color: #05005c;
     color: white;
-    border: none;
+    border-color: #05005c;
 }
